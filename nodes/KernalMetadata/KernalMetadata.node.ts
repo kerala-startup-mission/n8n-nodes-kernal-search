@@ -20,8 +20,8 @@ export class KernalMetadata implements INodeType {
         defaults: {
             name: 'Kernel Metadata',
         },
-        inputs: ['main' as NodeConnectionType],
-        outputs: ['main' as NodeConnectionType],
+        inputs: [NodeConnectionType.Main],
+        outputs: [NodeConnectionType.Main],
         credentials: [
             {
                 name: 'kernalApiAuthApi',
@@ -46,7 +46,7 @@ export class KernalMetadata implements INodeType {
                 description: 'Select the type of metadata to fetch',
             },
             {
-                displayName: 'Filter',
+                displayName: 'Filter Name or ID',
                 name: 'filter',
                 type: 'options',
                 default: '',
@@ -59,7 +59,7 @@ export class KernalMetadata implements INodeType {
                         metadata: ['industry', 'district'],
                     },
                 },
-                description: 'Filter industries by sector (only applicable if metadata type is Industry), Filter districts by state (only applicable if metadata type is District)',
+                description: 'Filter industries by sector (only applicable if metadata type is Industry), Filter districts by state (only applicable if metadata type is District). Choose from the list, or specify an ID using an <a href="https://docs.n8n.io/code/expressions/">expression</a>.',
             },
         ],
     };

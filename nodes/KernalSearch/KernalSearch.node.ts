@@ -20,8 +20,8 @@ export class KernalSearch implements INodeType {
         defaults: {
             name: 'Kernel Search',
         },
-        inputs: ['main' as NodeConnectionType],
-        outputs: ['main' as NodeConnectionType],
+        inputs: [NodeConnectionType.Main],
+        outputs: [NodeConnectionType.Main],
         credentials: [
             {
                 name: 'kernalApiAuthApi',
@@ -34,77 +34,76 @@ export class KernalSearch implements INodeType {
                 name: 'query',
                 type: 'string',
                 default: '',
-                required: false,
                 description: 'Search query text',
             },
             {
-                displayName: 'Sector',
+                displayName: 'Sector Name or ID',
                 name: 'sector',
                 type: 'options',
                 default: '',
-                description: 'Filter by sector. Choose from the list.',
+                description: 'Filter by sector. Choose from the list. Choose from the list, or specify an ID using an <a href="https://docs.n8n.io/code/expressions/">expression</a>.',
                 typeOptions: {
                     loadOptionsMethod: 'getSectors',
                 },
-				required: false, 
+
             },
             {
-                displayName: 'Industry',
+                displayName: 'Industry Name or ID',
                 name: 'industry',
                 type: 'options',
                 default: '',
-                description: 'Filter by industry. Choose from the list.',
+                description: 'Filter by industry. Choose from the list. Choose from the list, or specify an ID using an <a href="https://docs.n8n.io/code/expressions/">expression</a>.',
                 typeOptions: {
                     loadOptionsMethod: 'getIndustries',
                     loadOptionsDependsOn: ['sector'],
                 },
-				required: false, 
+
             },
             {
-                displayName: 'Technology',
+                displayName: 'Technology Name or ID',
                 name: 'technology',
                 type: 'options',
                 default: '',
-                description: 'Filter by technology. Choose from the list.',
+                description: 'Filter by technology. Choose from the list. Choose from the list, or specify an ID using an <a href="https://docs.n8n.io/code/expressions/">expression</a>.',
                 typeOptions: {
                     loadOptionsMethod: 'getTechnologies',
                 },
-				required: false, 
+
             },
             {
-                displayName: 'Business Model',
+                displayName: 'Business Model Name or ID',
                 name: 'business_model',
                 type: 'options',
                 default: '',
-                description: 'Filter by business model. Choose from the list.',
+                description: 'Filter by business model. Choose from the list. Choose from the list, or specify an ID using an <a href="https://docs.n8n.io/code/expressions/">expression</a>.',
                 typeOptions: {
                     loadOptionsMethod: 'getBusinessModels',
                 },
-				required: false, 
+
             },
             
             {
-                displayName: 'State',
+                displayName: 'State Name or ID',
                 name: 'state',
                 type: 'options',
                 default: '',
-                description: 'Filter by state. Choose from the list.',
+                description: 'Filter by state. Choose from the list. Choose from the list, or specify an ID using an <a href="https://docs.n8n.io/code/expressions/">expression</a>.',
                 typeOptions: {
                     loadOptionsMethod: 'getStates',
                 },
-				required: false, 
+
             },
             {
-                displayName: 'District',
+                displayName: 'District Name or ID',
                 name: 'district',
                 type: 'options',
                 default: '',
-                description: 'Filter by district. Choose from the list.',
+                description: 'Filter by district. Choose from the list. Choose from the list, or specify an ID using an <a href="https://docs.n8n.io/code/expressions/">expression</a>.',
                 typeOptions: {
                     loadOptionsMethod: 'getDistricts',
                     loadOptionsDependsOn: ['state'],
                 },
-				required: false, 
+
             },
 
             {
