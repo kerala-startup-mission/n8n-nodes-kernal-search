@@ -37,22 +37,22 @@ export class KernalSearch implements INodeType {
                 description: 'Search query text',
             },
             {
-                displayName: 'Sector Name or ID',
+                displayName: 'Sector',
                 name: 'sector',
                 type: 'options',
                 default: '',
-                description: 'Filter by sector. Choose from the list. Choose from the list, or specify an ID using an <a href="https://docs.n8n.io/code/expressions/">expression</a>.',
+                description: 'Filter by sector. Choose from the list.',
                 typeOptions: {
                     loadOptionsMethod: 'getSectors',
                 },
 
             },
             {
-                displayName: 'Industry Name or ID',
+                displayName: 'Industry',
                 name: 'industry',
                 type: 'options',
                 default: '',
-                description: 'Filter by industry. Choose from the list. Choose from the list, or specify an ID using an <a href="https://docs.n8n.io/code/expressions/">expression</a>.',
+                description: 'Filter by industry. Choose from the list.',
                 typeOptions: {
                     loadOptionsMethod: 'getIndustries',
                     loadOptionsDependsOn: ['sector'],
@@ -60,22 +60,22 @@ export class KernalSearch implements INodeType {
 
             },
             {
-                displayName: 'Technology Name or ID',
+                displayName: 'Technology',
                 name: 'technology',
                 type: 'options',
                 default: '',
-                description: 'Filter by technology. Choose from the list. Choose from the list, or specify an ID using an <a href="https://docs.n8n.io/code/expressions/">expression</a>.',
+                description: 'Filter by technology. Choose from the list.',
                 typeOptions: {
                     loadOptionsMethod: 'getTechnologies',
                 },
 
             },
             {
-                displayName: 'Business Model Name or ID',
+                displayName: 'Business Model',
                 name: 'business_model',
                 type: 'options',
                 default: '',
-                description: 'Filter by business model. Choose from the list. Choose from the list, or specify an ID using an <a href="https://docs.n8n.io/code/expressions/">expression</a>.',
+                description: 'Filter by business model. Choose from the list.',
                 typeOptions: {
                     loadOptionsMethod: 'getBusinessModels',
                 },
@@ -83,22 +83,22 @@ export class KernalSearch implements INodeType {
             },
             
             {
-                displayName: 'State Name or ID',
+                displayName: 'State',
                 name: 'state',
                 type: 'options',
                 default: '',
-                description: 'Filter by state. Choose from the list. Choose from the list, or specify an ID using an <a href="https://docs.n8n.io/code/expressions/">expression</a>.',
+                description: 'Filter by state. Choose from the list.',
                 typeOptions: {
                     loadOptionsMethod: 'getStates',
                 },
 
             },
             {
-                displayName: 'District Name or ID',
+                displayName: 'District',
                 name: 'district',
                 type: 'options',
                 default: '',
-                description: 'Filter by district. Choose from the list. Choose from the list, or specify an ID using an <a href="https://docs.n8n.io/code/expressions/">expression</a>.',
+                description: 'Filter by district. Choose from the list.',
                 typeOptions: {
                     loadOptionsMethod: 'getDistricts',
                     loadOptionsDependsOn: ['state'],
