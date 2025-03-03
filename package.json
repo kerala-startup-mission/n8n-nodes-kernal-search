@@ -1,28 +1,27 @@
 {
-  "name": "n8n-nodes-<...>",
+  "name": "n8n-nodes-kernal-search",
   "version": "0.1.0",
-  "description": "",
+  "description": "Custom n8n node for searching startups on Kernal Platform",
   "keywords": [
     "n8n-community-node-package"
   ],
   "license": "MIT",
   "homepage": "",
   "author": {
-    "name": "",
-    "email": ""
+    "name": "Sidharth Menon",
+    "email": "sidharth@startupmission.in"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/<...>/n8n-nodes-<...>.git"
+    "url": "https://github.com/kerala-startup-mission/n8n-nodes-kernal-search.git"
   },
   "engines": {
-    "node": ">=18.10",
-    "pnpm": ">=9.1"
+    "node": ">=18.10"
   },
   "packageManager": "pnpm@9.1.4",
   "main": "index.js",
   "scripts": {
-    "preinstall": "npx only-allow pnpm",
+    
     "build": "tsc && gulp build:icons",
     "dev": "tsc --watch",
     "format": "prettier nodes credentials --write",
@@ -36,12 +35,11 @@
   "n8n": {
     "n8nNodesApiVersion": 1,
     "credentials": [
-      "dist/credentials/ExampleCredentialsApi.credentials.js",
-      "dist/credentials/HttpBinApi.credentials.js"
+      "dist/credentials/KernalApiAuthApi.credentials.js"
     ],
     "nodes": [
-      "dist/nodes/ExampleNode/ExampleNode.node.js",
-      "dist/nodes/HttpBin/HttpBin.node.js"
+      "dist/nodes/KernalSearch/KernalSearch.node.js",
+      "dist/nodes/KernalMetadata/KernalMetadata.node.js"
     ]
   },
   "devDependencies": {
@@ -50,7 +48,10 @@
     "eslint-plugin-n8n-nodes-base": "^1.16.1",
     "gulp": "^4.0.2",
     "prettier": "^3.3.2",
-    "typescript": "^5.5.3"
+    "typescript": "^5.5.3",
+    "n8n-workflow": "^1.0.0",
+    "n8n-core": "^1.0.0",
+    "n8n-node-dev": "^1.0.0"
   },
   "peerDependencies": {
     "n8n-workflow": "*"
